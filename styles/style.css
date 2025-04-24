@@ -1,0 +1,385 @@
+/* 기본 스타일 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.page-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.product-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.product-item {
+    position: relative;
+}
+
+.product-button {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    font-size: 1.125rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-button:hover {
+    background-color: #e5e7eb;
+}
+
+/* 드롭다운 스타일 */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    z-index: 20;
+    width: 12rem;
+    display: none;
+}
+
+.dropdown-item {
+    position: relative;
+    padding: 0.25rem 0.75rem;
+    color: #1f2937;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f3f4f6;
+}
+
+.scent-link {
+    cursor: pointer;
+}
+
+.scent-link:hover {
+    text-decoration: underline;
+}
+
+.sub-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 12rem;
+    z-index: 30;
+    display: none;
+}
+
+.sub-dropdown-item {
+    padding: 0.25rem 0.75rem;
+    color: #374151;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.sub-dropdown-item:hover {
+    background-color: #e5e7eb;
+}
+
+/* 로딩 및 에러 메시지 스타일 */
+.loading {
+    padding: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    text-align: center;
+}
+
+.error-message {
+    padding: 1rem;
+    color: #b91c1c;
+    background-color: #fee2e2;
+    border-radius: 0.375rem;
+    text-align: center;
+    border: 1px solid #f87171;
+}
+
+/* 홈 링크 */
+.home-link {
+    color: #3b82f6;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* 제품 제목 */
+.product-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+/* 정렬 버튼 영역 */
+.sort-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.sort-button {
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.sort-button:hover {
+    background-color: #2563eb;
+}
+
+/* 향기 목록 */
+.scents-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.scent-card {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+}
+
+.scent-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.scent-title:hover {
+    text-decoration: underline;
+}
+
+.fragrances-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.fragrance-tag {
+    background-color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.fragrance-tag:hover {
+    background-color: #dbeafe;
+}
+
+/* 제품 목록 */
+.products-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.product-empty {
+    color: #6b7280;
+}
+
+.product-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.product-price {
+    color: #2563eb;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-link {
+    color: #16a34a;
+    text-decoration: underline;
+    font-size: 0.875rem;
+}
+
+/* 반응형 미디어 쿼리 */
+@media (min-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* scent.html 전용 스타일 */
+
+.p-8 {
+    padding: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.text-blue-500 {
+    color: #3b82f6;
+}
+
+.text-green-600 {
+    color: #16a34a;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.border {
+    border: 1px solid #e5e7eb;
+}
+
+.rounded {
+    border-radius: 0.375rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.hover\:bg-blue-100:hover {
+    background-color: #dbeafe;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-48 {
+    height: 12rem;
+}

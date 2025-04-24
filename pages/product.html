@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 페이지</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 홈으로 돌아가기 -->
+        <a href="/" class="home-link">← 홈으로</a>
+        
+        <!-- 제품 이름 -->
+        <h1 id="product-title" class="product-title"></h1>
+        
+        <!-- 정렬 토글 버튼 -->
+        <div class="sort-container">
+            <button id="sort-button" class="sort-button">가격 ▲ 오름차순</button>
+        </div>
+        
+        <!-- 향기 목록 (대분류 + 세부 향기) -->
+        <div id="scents-container" class="scents-container"></div>
+        
+        <!-- 전체 상품 목록 -->
+        <h2 class="products-title">전체 관련 상품</h2>
+        <div id="products-container" class="products-container"></div>
+    </div>
+    
+    <script src="../js/product.js"></script>
+</body>
+</html>

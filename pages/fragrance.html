@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>향기 상세 페이지</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <div class="container p-8">
+    <!-- 내비게이션 -->
+    <div class="mb-4 flex gap-4 text-sm" id="breadcrumb"></div>
+
+    <!-- 향기 제목 -->
+    <h1 class="text-2xl font-bold mb-1" id="main-title"></h1>
+    <h2 class="text-xl font-semibold mb-4" id="sub-title"></h2>
+
+    <!-- 세부 향기 선택 버튼 -->
+    <div class="flex gap-2 flex-wrap mb-6" id="fragrance-buttons"></div>
+
+    <div class="sort-container">
+        <button id="sort-button" class="sort-button">가격 ▲ 오름차순</button>
+      </div>
+
+    <!-- 상품 목록 -->
+    <div id="product-results" class="products-container"></div>
+  </div>
+
+  <script src="../js/fragrance.js"></script>
+</body>
+</html>
