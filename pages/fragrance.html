@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
+  <header class="nav-container">
+    <a class="nav-logo" href="/"> 
+
+        <img src="/assets/logo.png" alt="logo">
+        <h3>Scent Finder</h3>
+    </a>
+    <div class="nav-state" id="nav-state">현재 페이지</div>
+    <div class="nav-links"><!-- 홈으로 돌아가기 -->
+        <a href="/" class="home-link">← 홈으로</a>
+    </div>
+  </header>
   <div class="container p-8">
     <!-- 내비게이션 -->
     <div class="mb-4 flex gap-4 text-sm" id="breadcrumb"></div>
@@ -27,5 +38,6 @@
   </div>
 
   <script src="../js/fragrance.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 </html>
