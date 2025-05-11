@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     scentTitle.textContent = `${product} - ${target.scent}`;
 
     breadcrumb.innerHTML = `
-      <a href="/index.html" class="text-blue-500 underline">← 홈</a>
-      <a href="/pages/product.html?product=${encodeURIComponent(product)}" class="text-blue-500 underline">← ${product}</a>
+      
+      <a href="/pages/product.html?product=${encodeURIComponent(product)}">← ${product}</a>
     `;
 
     target.fragrances.forEach((frag) => {

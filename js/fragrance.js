@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 🧭 경로 및 타이틀 설정
     breadcrumb.innerHTML = `
-      <a href="/index.html" class="text-blue-500 underline">← 홈</a>
-      <a href="/pages/product.html?product=${product}" class="text-blue-500 underline">← ${product}</a>
-      <a href="/pages/scent.html?product=${product}&scent=${scent}" class="text-blue-500 underline">← ${scentGroup.scent}</a>
+      
+      <a href="/pages/product.html?product=${product}" >← ${product}</a>
+      <a href="/pages/scent.html?product=${product}&scent=${scent}" >← ${scentGroup.scent}</a>
     `;
     mainTitle.textContent = `${product} - ${scentGroup.scent}`;
     subTitle.textContent = `세부 향기: ${currentFragrance.name}`;
