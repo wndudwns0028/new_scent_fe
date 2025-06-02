@@ -20,7 +20,7 @@
     <div class="flex gap-4" id="breadcrumb"></div>
     </div>
   </header>
-  <div class="container p-8">
+  <div class="container">
     
 
     <!-- 제목 -->
@@ -29,12 +29,16 @@
     <!-- 세부 향기 목록 -->
     <div class="mb-6 flex flex-wrap gap-2" id="fragrance-list"></div>
 
-    <div class="sort-container">
+    
+    <div class="menu-wrapper">
+      <!-- 쇼핑 제목 -->
+      <h2 class="text-lg font-semibold mb-2 text-center" id="shopping-title"></h2>
+
+      <div class="sort-container">
         <button id="sort-button" class="sort-button">가격 ▲ 오름차순</button>
       </div>
-
-    <!-- 쇼핑 제목 -->
-    <h2 class="text-lg font-semibold mb-2" id="shopping-title"></h2>
+    </div>
+ 
 
     <!-- 쇼핑 결과 목록 -->
     <div id="shopping-results" class="products-container"></div>

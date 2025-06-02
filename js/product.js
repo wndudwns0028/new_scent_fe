@@ -15,12 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let products = [];
     let sortOrder = 'asc';
   
-    const productTitle = document.getElementById('product-title');
+ 
     const scentsContainer = document.getElementById('scents-container');
     const productsContainer = document.getElementById('products-container');
     const sortButton = document.getElementById('sort-button');
   
-    productTitle.textContent = product;
     sortButton.addEventListener('click', toggleSortOrder);
   
     loadData();
@@ -108,44 +107,36 @@ document.addEventListener('DOMContentLoaded', function () {
     // ✅ 상품 목록 렌더링
     function renderProducts() {
       productsContainer.innerHTML = '';
-  
+
       if (products.length === 0) {
         productsContainer.innerHTML = `<div class="product-empty">관련 상품이 없습니다.</div>`;
         return;
       }
-  
+
       const sorted = getSortedProducts();
-  
+
       sorted.forEach((item) => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
-  
-        const productImage = document.createElement('img');
-        productImage.src = item.image;
-        productImage.alt = stripHtml(item.title);
-        productImage.className = 'product-image';
-  
-        const productTitle = document.createElement('h3');
-        productTitle.className = 'product-title';
-        productTitle.innerHTML = item.title;
-  
-        const productPrice = document.createElement('p');
-        productPrice.className = 'product-price';
-        productPrice.textContent = `${item.lprice}원`;
-  
-        const productLink = document.createElement('a');
-        productLink.href = item.link;
-        productLink.target = '_blank';
-        productLink.className = 'product-link';
-        productLink.textContent = '네이버에서 보기';
-  
-        productCard.appendChild(productImage);
-        productCard.appendChild(productTitle);
-        productCard.appendChild(productPrice);
-        productCard.appendChild(productLink);
+
+        // ✅ 각 필드에 기본값 지정 (오류 방지용)
+        const image = item.image || '/assets/no-image.png'; // 이미지가 없을 경우 대체 이미지 사용
+        const title = stripHtml(item.title || '상품명 없음');
+        const price = item.lprice ? `${item.lprice}원` : '가격 정보 없음';
+        const link = item.link || '#';
+
+        // ✅ 하나의 innerHTML로 카드 구성
+        productCard.innerHTML = `
+          <img src="${image}" alt="${title}" class="product-image">
+          <div class="product-title">${title}</div>
+          <p class="product-price">${price}</p>
+          <a href="${link}" target="_blank" class="product-link">네이버에서 보기</a>
+        `;
+
         productsContainer.appendChild(productCard);
       });
     }
+
   
     // ✅ 가격 정렬 기능
     function getSortedProducts() {

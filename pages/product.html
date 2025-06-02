@@ -20,21 +20,21 @@
     </header>
     <div class="container">
         
-        
-        <!-- 제품 이름 -->
-        <h1 id="product-title" class="product-title"></h1>
-        
-        <!-- 정렬 토글 버튼 -->
-        <div class="sort-container">
-            <button id="sort-button" class="sort-button">가격 ▲ 오름차순</button>
-        </div>
-        
         <!-- 향기 목록 (대분류 + 세부 향기) -->
         <div id="scents-container" class="scents-container"></div>
-        
+
         <!-- 전체 상품 목록 -->
-        <h2 class="products-title">전체 관련 상품</h2>
+        
+        <div class="menu-wrapper">
+            <h2 class="products-title">전체 관련 상품</h2>
+            <!-- 정렬 토글 버튼 -->
+            <div class="sort-container">
+                <button id="sort-button" class="sort-button">가격 ▲ 오름차순</button>
+            </div>
+        </div>
+
         <div id="products-container" class="products-container"></div>
+        
     </div>
     
     <script src="../js/product.js"></script>

@@ -74,6 +74,9 @@ body {
 .product-container {
     display: flex;
     gap: 1rem;
+    justify-content: center; /* 내부 아이템들을 중앙 정렬 */
+    min-width: 1200px;
+    margin: 0 auto; /* 전체 컨테이너를 중앙에 배치 */
 }
 
 .product-item {
@@ -188,11 +191,23 @@ body {
     text-transform: capitalize;
 }
 
+.menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 /* 정렬 버튼 영역 */
 .sort-container {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .sort-button {
@@ -261,12 +276,15 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
+
 }
 
 .products-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
+    width: 100%;
 }
 
 .product-empty {
@@ -369,6 +387,10 @@ body {
 
 .text-green-600 {
     color: #16a34a;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-sm {
