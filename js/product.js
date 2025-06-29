@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // ✅ 향기 정보 + 네이버 API 데이터 불러오기
     async function loadData() {
       try {
-        const API_URL = 'http://127.0.0.1:8000';
-  
+        //const API_URL = 'http://127.0.0.1:8000';
+        const API_URL = 'http://13.209.7.47:8000';
         const response = await fetch(`${API_URL}/fragrances`);
         const data = await response.json();
   

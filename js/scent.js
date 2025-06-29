@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const product = decodeURIComponent(params.get("product") || "");
   const scent = decodeURIComponent(params.get("scent") || "");
 
-  const API_URL = "http://127.0.0.1:8000";
-
+  //const API_URL = "http://127.0.0.1:8000";
+  const API_URL = 'http://13.209.7.47:8000';
+  
   const scentTitle = document.getElementById("scent-title");
   const fragranceList = document.getElementById("fragrance-list");
   const shoppingResults = document.getElementById("shopping-results");
