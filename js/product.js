@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     async function loadData() {
       try {
         //const API_URL = 'http://127.0.0.1:8000';
-        const API_URL = 'http://13.209.7.47:8000';
+        // const API_URL = 'http://13.209.7.47:8000';
+        const API_URL = 'https://scent.o-r.kr';
         const response = await fetch(`${API_URL}/fragrances`);
         const data = await response.json();
   
