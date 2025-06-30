@@ -7,7 +7,8 @@ let sortOrder = 'asc';
 
 // API URL 설정
 // const API_URL = 'http://127.0.0.1:8000/fragrances'; // 실제 API 경로로 수정해주세요
-const API_URL = 'http://13.209.7.47:8000/fragrances';
+// const API_URL = 'http://13.209.7.47:8000/fragrances';
+const API_URL = 'https://scent.o-r.kr/fragrances';
 // API 호출 함수
 async function fetchData() {
     try {
